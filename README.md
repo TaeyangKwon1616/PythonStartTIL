@@ -187,3 +187,92 @@ card = True
 if money > 3000 or card:
     print("택시를 타고 가라")
 ```
+```py
+pocket = ['money', 'cellphone', 'paper']
+if 'money' in pocket: #반대는 if ~ not in pocket
+    print("돈이 있네?") 
+```
+```py
+pocket = ['money', 'cellphone', 'paper']
+if 'money' in pocket:
+    pass #아무일도 없었다
+else:
+    print("What do you have?")
+```
+```py
+if score >= 60:
+    message = "success"
+else:
+    message = "failure"
+```
+=
+```py
+message = "success" if score >= 60 else message = "failure"
+```
+### While
+```py
+treehit = 0
+while treehit < 10:
+    treehit += 1
+    print("나무를 %d번 찍었습니다." %treehit)
+    if treehit == 10:
+        print("나무가 넘어갑니다")
+```
+```py
+prompt = '''
+Enter number
+'''
+number = int(input())
+while number != 4:
+    print(prompt)
+    number = int(input())
+print("4를 입력하셨습니다")
+```
+```py
+coffee = 10
+while True:
+    money = int(input("돈을 넣어주세요"))
+    if money >= 300:
+        print("감사합니다. 거스름돈 %d 원입니다." %(money-300))
+        coffee -= 1
+        print("커피 현재 재고는 %d 잔 입니다."%coffee) 
+        # break 여기서 사용하면 반복이 중단되어서 커피를 한잔밖에 못사잖아요
+    else:
+        print("돈이 부족하네요 하하")
+```
+```py
+coffee = 10
+while True:
+    money = int(input("돈을 넣어주세요"))
+    if money == 300:
+        print("커피를 줍니다")
+        coffee -= 1
+        print("커피나왔습니다. 남은 커피는 %d잔입니다" %coffee)
+    elif money > 300:
+        print("거스름돈은 %d원이고, 커피를 줍니다" %(money -300))
+        coffee -= 1
+        print("커피나왔습니다. 남은 커피는 %d잔입니다" %coffee)
+    else:
+        print("거지네요")
+    
+    if coffee == 0:
+        print("커피 종료")
+        break
+```
+내가 한거
+```py
+n = 0
+while 0 <= n and n < 10:
+    n += 1
+    if n % 3 == 0:
+        pass
+    else:
+        print(n)
+```
+```py
+a = 0
+while a < 10:
+    a += 1
+    if a %3 ==0: continue
+    print(a)
+```        
